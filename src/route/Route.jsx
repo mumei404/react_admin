@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { About } from '../component/About';
-import { Contact } from '../component/Contact';
-import { Home } from '../component/Home';
-import { NotFound } from '../component/NotFound';
+import { About } from '../page/About';
+import { Contact } from '../page/Contact';
+import { Home } from '../page/Home';
+import { NotFound } from '../page/NotFound';
 import { Layout } from '../component/Layout';
 
 export const RouterConfig = () => {
