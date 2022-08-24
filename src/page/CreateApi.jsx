@@ -18,7 +18,8 @@ export const CreateApi = () => {
 		setSubmittedData(nextData)
 		if(data.step === 3) {
 			const add = async (data) => {
-				const result = await addApiList(data);
+				await addApiList(data);
+				navigate('/api-list');
 			}
 			add(nextData)
 		}

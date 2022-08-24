@@ -5,6 +5,7 @@ import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PeopleIcon from '@mui/icons-material/People';
+import { clearApiList } from '../api/api';
 
 export const mainListItems = (
   <>
@@ -16,12 +17,12 @@ export const mainListItems = (
 				<ListItemText primary="Home" />
 			</ListItemButton>
 		</Link>
-		<Link to="/about">
+		<Link to="/api-list">
 			<ListItemButton>
 				<ListItemIcon>
 					<ShoppingCartIcon />
 				</ListItemIcon>
-				<ListItemText primary="About" />
+				<ListItemText primary="コンテンツ(API)" />
 			</ListItemButton>
 		</Link>
 		<Link to="/contact">
@@ -40,5 +41,13 @@ export const mainListItems = (
 				<ListItemText primary="Create API" />
 			</ListItemButton>
 		</Link>
+		<hr />
+		<span>debug mode</span>
+		<ListItemButton onClick={clearApiList}>
+			<ListItemIcon>
+				<PeopleIcon />
+			</ListItemIcon>
+			<ListItemText primary="リセット ストレージ" />
+		</ListItemButton>
   </>
 );
