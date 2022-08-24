@@ -13,7 +13,7 @@ import MuiDrawer from '@mui/material/Drawer';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
-import { mainListItems } from './listItems';
+import { ListItems } from './listItems';
 import Container from '@mui/material/Container';
 import { Copyright } from './Copyright';
 
@@ -123,7 +123,7 @@ export const Layout = ({ children }) => {
           </Toolbar>
           <Divider />
           <List component="nav">
-            {mainListItems}
+						<ListItems />
           </List>
 				</Drawer>
         <Box
