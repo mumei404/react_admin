@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { addApiList } from "../api/api";
 
 export const CreateApi = () => {
 	const { register, handleSubmit, formState: { isSubmitSuccessful, errors }, reset, control } = useForm();
@@ -16,7 +17,10 @@ export const CreateApi = () => {
 		let nextData = { ...data, step: step + 1}
 		setSubmittedData(nextData)
 		if(data.step === 3) {
-			console.log('final', nextData)
+			const add = async (data) => {
+				const result = await addApiList(data);
+			}
+			add(nextData)
 		}
 	};
 	const back = e => {
