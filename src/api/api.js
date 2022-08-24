@@ -8,6 +8,16 @@ export const fetchApiList = () => {
 	return Promise.resolve(JSON.parse(sessionStorage.getItem('apiList') || '[]'))
 };
 
+export const fetchApiOne = async (id) => {
+	const list = await fetchApiList();
+	const data = list.find(item => item.apiId === id);
+	if(data === undefined) {
+		return Promise.reject()
+	} else {
+		return Promise.resolve(data)
+	}
+};
+
 export const clearApiList = () => {
 	sessionStorage.setItem('apiList', []);
 	return Promise.resolve('success')

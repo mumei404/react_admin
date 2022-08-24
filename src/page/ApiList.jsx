@@ -59,7 +59,7 @@ export const ApiList = () => {
 											<td>{item.apiId}</td>
 											<td>{item.apiType}</td>
 											<td>12:03</td>
-											<td><Link to="/contact">詳細</Link></td>
+											<td><Link to={`/api-list/${item.apiId}`}>詳細</Link></td>
 										</tr>
 									)
 								})}

@@ -3,6 +3,7 @@ import { About } from '../page/About';
 import { Contact } from '../page/Contact';
 import { Home } from '../page/Home';
 import { ApiList } from '../page/ApiList';
+import { ApiDetail } from '../page/ApiDetail';
 import { CreateApi } from '../page/CreateApi';
 import { NotFound } from '../page/NotFound';
 import { Layout } from '../component/Layout';
@@ -15,6 +16,7 @@ export const RouterConfig = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/api-list" element={<ApiList />} />
+						<Route path="/api-list/:id" element={<ApiDetail />} />
 						<Route path="/contact" element={<Contact />} />
 						<Route path="/create-api" element={<CreateApi />} />
 						<Route path="*" element={<NotFound />} />
