@@ -32,5 +32,13 @@ export const mainListItems = (
 				<ListItemText primary="Contact" />
 			</ListItemButton>
 		</Link>
+		<Link to="/create-api">
+			<ListItemButton>
+				<ListItemIcon>
+					<PeopleIcon />
+				</ListItemIcon>
+				<ListItemText primary="Create API" />
+			</ListItemButton>
+		</Link>
   </>
 );
